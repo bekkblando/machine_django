@@ -37,8 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
     'learndjango',
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -52,7 +52,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'machinedjango.urls'
+ROOT_URLCONF = 'autus_api.urls'
 
 TEMPLATES = [
     {
@@ -77,17 +77,8 @@ WSGI_APPLICATION = 'machinedjango.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'machinedjango',
-        'USER': 'BekkBlando',
-    }
-}
 
-
-# DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
-
+DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
@@ -125,6 +116,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',),
