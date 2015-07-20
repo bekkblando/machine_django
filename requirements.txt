@@ -10,3 +10,4 @@ djangorestframework
 markdown
 django-filter
 numpy
+scikit-learn
