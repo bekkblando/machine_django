@@ -12,6 +12,7 @@ nose
 numpy
 pandas
 psycopg2
+setuptools
 pyparsing
 pystache
 python-dateutil
