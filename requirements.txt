@@ -13,3 +13,4 @@ numpy
 scikit-learn
 matplotlib
 django-picklefield
+scipy

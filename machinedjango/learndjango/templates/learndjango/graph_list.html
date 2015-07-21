@@ -5,6 +5,7 @@
     <title></title>
 </head>
 <body>
+<a href="{% url 'predict' %}">Make Prediction</a>
 {% for graph in object_list %}
     <li><img src="/static/figure.png"/>, {{ graph.title }}</li>
 {% endfor %}
