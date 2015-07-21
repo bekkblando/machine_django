@@ -52,7 +52,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'autus_api.urls'
+ROOT_URLCONF = 'machinedjango.urls'
 
 TEMPLATES = [
     {
