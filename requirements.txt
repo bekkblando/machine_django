@@ -19,6 +19,5 @@ pytz
 scikit-learn
 scipy==0.14.0
 six
-static
-static3
+celery
 wheel
