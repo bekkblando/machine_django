@@ -9,7 +9,7 @@ gunicorn
 Markdown
 matplotlib
 nose
-numpy=1.8.1
+numpy==1.8.1
 pandas
 psycopg2
 pyparsing
@@ -17,7 +17,7 @@ pystache
 python-dateutil
 pytz
 scikit-learn
-scipy=0.14.0
+scipy==0.14.0
 six
 static
 static3
