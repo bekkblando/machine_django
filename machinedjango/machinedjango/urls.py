@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from learndjango.views import GraphView
+from learndjango.views import GraphView, predict
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^graph/$', GraphView.as_view(), name="graph"),
+    url(r'^predict/$', predict, name="predict"),
+
 ]

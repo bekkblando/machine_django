@@ -1,3 +1,9 @@
+import sys
+import os
+import pickle
+sys.path.append(os.path.join(os.path.dirname(__file__), 'machinedjango'))
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "machinedjango.settings")
+from django.conf import settings
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
@@ -20,10 +26,11 @@ print(regr1.score(ground_temp, chirp))
 plt.scatter(ground_temp, chirp,  color='black')
 plt.plot(ground_temp, regr1.predict(ground_temp), color='blue', linewidth=3)
 filename = "figure.png"
-path = "static/"
+path = "learndjango/static/"
 fullpath = os.path.join(path, filename)
 plt.savefig(fullpath)
-newg = Graph.objects.create(title="Crickets", fitequation=regr1, image="static/figure.png")
+equation = pickle.dumps(regr1)
+newg = Graph.objects.create(title="Crickets", fitequation=equation, image="/learndjango/static/figure.png")
 
 
 newg.save()
